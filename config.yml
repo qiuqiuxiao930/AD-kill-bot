@@ -1,0 +1,19 @@
+detection:
+  keywords_file: rules/keywords.txt
+  use_ai_model: true
+  confidence_threshold: 0.85
+
+actions:
+  on_detect:
+    delete_message: true
+    warn_user: true
+    max_warnings: 3
+    ban_on_max_warnings: true
+
+whitelist:
+  users: []
+  roles: ["管理员", "版主"]
+
+logging:
+  save_to_file: true
+  log_path: logs/scamguard.log
